@@ -39,11 +39,12 @@ class cuadros extends HTMLElement {
                 this.population = paises[this.numer].population;
 
                 this.innerHTML = `<div >
-            <div>Hola ${typeof (this.numer)}</div>
-            <div style="color: green">Hola ${this.numer}</div>
-            <div>Hola ${this.country}</div>
-            <div>Hola ${this.capital}</div>
-            <div>Hola ${this.population}</div>
+            <div style=" width: 100% ;display: flex " >
+            <div style="font-weight: bold; width: 50%">País : </div>
+            <div  style=" text-align: right; width: 50% " >${this.country}</div>
+             </div>
+            <div  style="">Hola ${this.capital}</div>
+            <div style="" >Hola ${this.population}</div>
             <p>Esto es un párrafo</p>
              </div>`;
 
@@ -53,10 +54,7 @@ class cuadros extends HTMLElement {
             this.style.border="1px solid red";
             this.style.float="left";
             this.style.padding="10px";
-            // this.style.color = "green";
-            // this.style.fontFamily = "sans-serif";
-            // this.style.display= "flex";
-            // this.style.justifyContent= "flex-start";
+            
     }
 
 
