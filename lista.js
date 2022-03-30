@@ -2,8 +2,8 @@
 class cuadros extends HTMLElement {
     constructor() {
         super();
-     
-        this.id ;
+
+        this.id;
     }
 
     static get observedAttributes() {
@@ -12,49 +12,51 @@ class cuadros extends HTMLElement {
 
     attributeChangedCallback(nameAttr, oldValue, newValue) {
 
-            switch(nameAttr){
+        switch (nameAttr) {
             case "id":
                 this.valor = newValue;
-                this.numer= parseInt(this.valor);
+                this.numer = parseInt(this.valor);
 
-               
-            break;
+                break;
         }
 
     }
 
     connectedCallback() {
-       
 
         const API_URL = 'https://restcountries.com/v3.1/lang/spa';
         const xhr = new XMLHttpRequest();
-        //const lista = $("#nombre");
-        const lista = document.querySelector(".columns-desktop");
-        const ul = document.createElement('ul');
+              
         fetch(`${API_URL}`)
-        .then((response) => response.json())
-        .then((paises) => {
+            .then((response) => response.json())
+            .then((paises) => {
 
-            console.log(paises.length);
-            console.log(paises);
-           
-            this.country =paises[this.numer].name.common;
-            this.capital =paises[this.numer].capital;
-            this.population =paises[this.numer].population;
+                console.log(paises.length);
+                console.log(paises);
 
-            this.innerHTML = `<div>
-            <h1>Hola ${typeof(this.numer)}</h1>
-            <h1>Hola ${this.numer}</h1>
-            <h1>Hola ${this.country}</h1>
-            <h1>Hola ${this.capital}</h1>
-            <h1>Hola ${this.population}</h1>
+                this.country = paises[this.numer].name.common;
+                this.capital = paises[this.numer].capital;
+                this.population = paises[this.numer].population;
+
+                this.innerHTML = `<div >
+            <div>Hola ${typeof (this.numer)}</div>
+            <div style="color: green">Hola ${this.numer}</div>
+            <div>Hola ${this.country}</div>
+            <div>Hola ${this.capital}</div>
+            <div>Hola ${this.population}</div>
             <p>Esto es un párrafo</p>
              </div>`;
 
-          
-        });
-        
 
+            });
+            this.style.width="33.33%";
+            this.style.border="1px solid red";
+            this.style.float="left";
+            this.style.padding="10px";
+            // this.style.color = "green";
+            // this.style.fontFamily = "sans-serif";
+            // this.style.display= "flex";
+            // this.style.justifyContent= "flex-start";
     }
 
 
