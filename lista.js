@@ -40,11 +40,13 @@ class cuadros extends HTMLElement {
                 this.habt = paises[this.numer].population;
                 this.population = new Intl.NumberFormat().format(this.habt);
 
+                this.region = paises[this.numer].region;
+
                 this.innerHTML = ` 
              <div >
                 <div id= "basic"  >
                 <div id="tit">País : </div>
-                <div  style=" width: 50%; font-size: 18px ; font-family: Georgia, serif ; color : #008B8B" >
+                <div id="pais">
                 <a onclick="document.getElementById('myModal').style.display='block'" >${this.country}</a></div>
                  </div>
                  
@@ -61,7 +63,7 @@ class cuadros extends HTMLElement {
                 <div id="myModal" class="modal">
                         <div class="modal-content">
                         <span onclick="document.getElementById('myModal').style.display='none'" id="close">&times;</span>
-                        <p>Some text in the Modal..</p>
+                        <p class="region" >Continente :  ${this.region}</p>
                         </div>
                 </div>
                 
@@ -69,7 +71,10 @@ class cuadros extends HTMLElement {
             </div>
          
                 <style>
-               
+                #pais{
+                    width: 50%; font-size: 18px ; font-family: Georgia, serif ; 
+                    color : #008B8B
+                }
                 #basic {
                     width: 100% ;display: flex; 
                     margin: 5px 2px ; text-align: center
@@ -77,18 +82,19 @@ class cuadros extends HTMLElement {
                 #tit{
                     font-weight: bold; width: 50%
                 }
+           
                 .modal {
-                    display: none; /* Hidden by default */
-                    position: fixed; /* Stay in place */
-                    z-index: 1; /* Sit on top */
-                    padding-top: 300px; /* Location of the box */
+                    display: none; 
+                    position: fixed; 
+                    z-index: 1; 
+                    padding: 300px; 
                     left: 0;
                     top: 0;
-                    width: 100%; /* Full width */
-                    height: 100%; /* Full height */
-                    overflow: auto; /* Enable scroll if needed */
-                    background-color: rgb(0,0,0); /* Fallback color */
-                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                    width: 100%; 
+                    height: 100%; 
+                    overflow: auto; 
+                    background-color: rgb(0,0,0); 
+                    background-color: rgba(0,0,0,0.4);
                   }
 
                   .modal-content {
@@ -97,12 +103,13 @@ class cuadros extends HTMLElement {
                     padding: 20px;
                     border: 1px solid #888;
                     width: 80%;
+                    text-align: center;
                   }
 
                   #close {
                     color: #aaaaaa;
                     float: right;
-                    font-size: 28px;
+                    font-size: 22px;
                     font-weight: bold;
                   }
 
@@ -122,18 +129,9 @@ class cuadros extends HTMLElement {
         this.style.padding = "10px";
         this.style.marginBottom = "5px"
 
-
-
-
-
-
     }
 
-
-
 }
-
-
 window.customElements.define("paises-api", cuadros);
 console.log("prueba");
 
