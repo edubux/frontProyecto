@@ -7,7 +7,7 @@
   body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-     background-color: #999;
+     
   }
 
   header {
@@ -15,8 +15,26 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+     padding: 30px;
+    background-image: 
+    url("https://t2.up.ltmcdn.com/es/posts/1/2/8/los_paises_que_hay_en_el_mundo_definicion_y_resumen_2821_0_orig.jpg");
+    background-size: cover;
+    background-position: center;
     
+    
+   
+  }
+  .fontTi {
+    margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
+  }
+
+  #titPrin {
+    text-align: center;
+    text-transform: uppercase;
+    color: #34176b;
   }
 
   main {
@@ -24,14 +42,30 @@
     background-color: beige;
     padding-top: 1em;
     padding-bottom: 1em;
-   min-height: 90%;
+   min-height: 60%;
     
   }
   .columns-desktop {
     display: flex;
     padding: 15px;
-    border: 1px solid red;
     flex-wrap: wrap;
+    
+   
   }
+
+  footer{
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+     padding: 30px;
+     background-image: 
+    url("https://thumbs.dreamstime.com/b/wavy-line-shapes-m…late-advertising-printing-packaging-224517416.jpg");
+    background-position: center ;
+         background-size: cover; 
+ 
+  }
+  
+  
   
  

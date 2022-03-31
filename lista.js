@@ -38,22 +38,36 @@ class cuadros extends HTMLElement {
                 this.capital = paises[this.numer].capital;
                 this.population = paises[this.numer].population;
 
-                this.innerHTML = `<div >
-            <div style=" width: 100% ;display: flex " >
-            <div style="font-weight: bold; width: 50%">País : </div>
-            <div  style=" text-align: right; width: 50% " >${this.country}</div>
-             </div>
-            <div  style="">Hola ${this.capital}</div>
-            <div style="" >Hola ${this.population}</div>
-            <p>Esto es un párrafo</p>
-             </div>`;
+                this.innerHTML = `  <div >
+                <div style=" width: 100% ;display: flex; margin: 5px 2px ; text-align: center" >
+                <div style="font-weight: bold; width: 50%">País : </div>
+                <div  style="  width: 50% " >${this.country}</div>
+                 </div>
+                 
+                <div style=" width: 100% ;display: flex; margin: 5px 2px ; text-align: center" >
+                <div style="font-weight: bold; width: 50%">Capital : </div>
+                <div  style="  width: 50% " >${this.capital}</div>
+                 </div>
+                
+                <div style=" width: 100% ;display: flex; margin: 5px 2px; text-align: center" >
+                <div style="font-weight: bold; width: 50%">Población : </div>
+                <div  style="  width: 50% " >${this.population} hab.</div>
+                 </div>
+                
+         </div>`;
 
 
             });
             this.style.width="33.33%";
-            this.style.border="1px solid red";
-            this.style.float="left";
+            this.style.border = "1px solid red";
             this.style.padding="10px";
+            this.style.marginBottom= "5px"
+            
+           ;
+            
+
+            
+            
             
     }
 
