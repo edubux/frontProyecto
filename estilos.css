@@ -20,9 +20,11 @@
     url("https://t2.up.ltmcdn.com/es/posts/1/2/8/los_paises_que_hay_en_el_mundo_definicion_y_resumen_2821_0_orig.jpg");
     background-size: cover;
     background-position: center;
-    
-    
-   
+  
+  }
+
+  .titulo{
+    padding: 15px;;
   }
   .fontTi {
     margin: 30px;
@@ -39,7 +41,7 @@
 
   main {
     
-    background-color: beige;
+    background-color: #F8F8FF;
     padding-top: 1em;
     padding-bottom: 1em;
    min-height: 60%;
@@ -60,10 +62,29 @@
     width: 100%;
      padding: 30px;
      background-image: 
-    url("https://thumbs.dreamstime.com/b/wavy-line-shapes-m…late-advertising-printing-packaging-224517416.jpg");
+    url("https://ak.picdn.net/shutterstock/videos/1032668762/thumb/1.jpg");
     background-position: center ;
-         background-size: cover; 
- 
+    background-size: cover; 
+  
+  }
+  .pie {
+   
+    text-align: center;
+  }
+
+  .pie p {
+    color: rgb(10, 8, 8);
+    margin: 0;
+  }
+
+  .pie a {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: oblique;
+    font-family: Georgia, serif ; 
+
   }
   
   
