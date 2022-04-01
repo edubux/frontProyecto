@@ -148,7 +148,7 @@ class cuadros extends HTMLElement {
                      `;
 
             });
-        this.style.width = "33.33%";
+        this.style.width = "25%";
         this.style.border = "1px solid green";
         this.style.padding = "10px";
         this.style.marginBottom = "5px"

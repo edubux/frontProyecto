@@ -25,12 +25,13 @@
 
   .titulo{
     padding-left: 15px;
+    margin-bottom: 20px;;
   }
   .fontTi {
     margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.8;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
   }
 
   #titPrin {
@@ -40,11 +41,11 @@
   }
 
   main {
-    
     background-color: #F8F8FF;
-    padding-top: 1em;
-    padding-bottom: 1em;
-   min-height: 60%;
+    min-height: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
   }
   .columns-desktop {
@@ -60,16 +61,15 @@
     top: 0;
     left: 0;
     width: 100%;
-     padding: 30px;
-     background-image: 
+    padding: 30px;
+    background-image: 
     url("https://ak.picdn.net/shutterstock/videos/1032668762/thumb/1.jpg");
     background-position: center ;
     background-size: cover; 
   
   }
   .pie {
-   
-    text-align: center;
+   text-align: center;
   }
 
   .pie p {
@@ -85,6 +85,12 @@
     font-style: oblique;
     font-family: Georgia, serif ; 
 
+  }
+  @media only screen and (max-width: 1067px){
+    .titulo{
+     margin-top: 15px ;
+    }
+ 
   }
   
   
