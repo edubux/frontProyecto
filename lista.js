@@ -52,12 +52,12 @@ class cuadros extends HTMLElement {
                  
                 <div id= "basic"  >
                 <div id="tit">Capital : </div>
-                <div  style="  width: 50% " >${this.capital}</div>
+                <div  id="result" >${this.capital}</div>
                  </div>
                 
                 <div id= "basic"  >
                 <div id="tit" >Población : </div>
-                <div  style=" width: 50% " >${this.population} hab.</div>
+                <div  id="result">${this.population} hab.</div>
                 </div>
 
                 <div id="myModal" class="modal">
@@ -73,15 +73,21 @@ class cuadros extends HTMLElement {
                 <style>
                 #pais{
                     width: 50%; font-size: 18px ; font-family: Georgia, serif ; 
-                    color : #008B8B
+                    color : #008B8B;
                 }
                 #basic {
                     width: 100% ;display: flex; 
                     margin: 5px 2px ; text-align: center
                 }
                 #tit{
-                    font-weight: bold; width: 50%
+                    font-weight: bold; width: 50%; 
                 }
+                #result {
+                    width: 50%; 
+                }
+
+               
+
            
                 .modal {
                     display: none; 
@@ -119,6 +125,29 @@ class cuadros extends HTMLElement {
                     text-decoration: none;
                     cursor: pointer;
                     }
+
+                    @media only screen and (max-width: 655px){
+                        #basic {
+                            width: 100% ;display: flex; 
+                            margin: 5px 2px ; text-align: center;
+                            flex-wrap: wrap;
+                        }
+                        #pais{
+                            width: 100%; font-size: 18px ; font-family: Georgia, serif ; 
+                            color : #008B8B; 
+                        }
+                       
+                        #tit{
+                            font-weight: bold; width: 100%;
+                            background-color: lightblue;
+                            
+                        }
+                        #result {
+                            width: 100%; 
+                        }
+                       
+                    }
+                  
                 </style>
                      `;
 
