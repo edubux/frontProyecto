@@ -2,7 +2,6 @@
 class cuadros extends HTMLElement {
     constructor() {
         super();
-
         this.id;
     }
 
@@ -16,7 +15,6 @@ class cuadros extends HTMLElement {
             case "id":
                 this.valor = newValue;
                 this.numer = parseInt(this.valor);
-
                 break;
         }
 
@@ -86,14 +84,11 @@ class cuadros extends HTMLElement {
                     width: 50%; 
                 }
 
-               
-
-           
                 .modal {
                     display: none; 
                     position: fixed; 
                     z-index: 1; 
-                    padding: 300px; 
+                    padding-top: 300px; 
                     left: 0;
                     top: 0;
                     width: 100%; 
@@ -143,14 +138,14 @@ class cuadros extends HTMLElement {
                             
                         }
                         #result {
-                            width: 100%; 
+                            width: 100%;
+                            padding-top: 5px; 
                         }
                        
                     }
-                  
+                                      
                 </style>
                      `;
-
 
             });
         this.style.width = "33.33%";
@@ -163,9 +158,3 @@ class cuadros extends HTMLElement {
 }
 window.customElements.define("paises-api", cuadros);
 console.log("prueba");
-
-$("#cambiar").click(function () {
-    $("#text").html("<h1>Se cambio texto </h1>");
-})
-
-
